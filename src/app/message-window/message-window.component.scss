@@ -1,0 +1,67 @@
+.message-card{
+    width: 260px;
+    position: fixed;
+    bottom: 0;
+    right: 100px;
+    border-top-left-radius: 1rem!important;
+    background-color: ghostwhite;
+    border-top-right-radius: 1rem!important;
+}
+p{
+    all: unset;
+}
+.card-icon{
+    cursor: pointer;
+}
+.message-card-open{
+    height: 400px;
+}
+.search{
+    border-radius: 0.3rem !important;
+    height: 30px;
+    padding-left: 10px;
+    background-color: #C8C4FE32 !important;
+    border: none;
+    font-size: 13px;
+}
+.fontAwesome {
+    font-family: 'Helvetica', FontAwesome, sans-serif;
+  }
+.search::placeholder{
+    padding-left: 1px;
+    font-size: 13px;
+}
+.search:focus{
+outline: none;
+}
+.chat-text{
+    font-size: 0.8rem;
+    line-height: 1;
+}
+.chat-name{
+    font-size: 0.90rem;
+}
+.main-chat-section{
+    height: 355px;
+    overflow-y: scroll;
+    /* width */
+
+}
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #e2e2e2; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #333951be; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333951; 
+  }

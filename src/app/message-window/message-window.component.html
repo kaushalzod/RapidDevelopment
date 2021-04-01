@@ -1,0 +1,28 @@
+<div class="message-card p-2 shadow-lg px-2" [ngClass]="{'message-card-open' : messageCard}">
+    <div class="d-flex align-items-center">
+        <div class="">
+            <img src="https://images.unsplash.com/photo-1616608200010-aeb69b842266?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="" height="30px" width="30px" class=" rounded-circle">
+        </div>
+        <div>
+            <p class="m-0 ms-2 me-4">Messaging</p>
+            <span class="ms-5 card-icon" 
+            aria-hidden="true">•••</span>
+            <span *ngIf="!messageCard" class="fa fa-angle-up ms-3 card-icon" aria-hidden="true" (click)="toggleWindow()"></span>
+            <span *ngIf="messageCard" class="fa fa-angle-down ms-3 card-icon" aria-hidden="true" (click)="toggleWindow()"></span>
+        </div>
+    </div>
+    <div *ngIf="messageCard" >
+        <hr class="mt-2 mb-2 mx-2">
+        <input type="text" class="col-12 search fontAwesome mb-2" placeholder="&#xf002; Search Message">
+        <div class="main-chat-section">
+            <div class="chat d-flex mt-2 card-icon" *ngFor="let profile of chat;">
+                <img src="{{profile.img}}" class="rounded-circle" alt="" height="40px" width="40px">
+                <div class="chat-message d-flex flex-column">
+                    <p class="m-0 ms-2 me-4 fw-bold chat-name">{{profile.name}}</p>
+                    <p class="m-0 ms-2 me-4 text-muted chat-text">{{profile.message}}</p>
+                    <!-- <hr style="width: 170px; margin-bottom: 0;"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
